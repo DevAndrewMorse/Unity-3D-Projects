@@ -15,14 +15,19 @@ public class PlayerController : MonoBehaviour
 
     #region Methods
 
-    // Start is called before the first frame update
+    // Callback: Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    // Callback: Update is called once per frame
     void Update()
+    {
+        MovePlayer();
+    }
+
+    void MovePlayer()
     {
         //User input
         float xValue = Input.GetAxis(HORIZONTAL) * Time.deltaTime * _moveSpeed;
